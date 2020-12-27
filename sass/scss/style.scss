@@ -1,5 +1,7 @@
 @import "config";
 @import "_buttons";
+@import "utilities";
+@import "mobile";
 * {
     box-sizing: border-box;
     margin: 0;
@@ -17,8 +19,7 @@ a {
 }
 
 .showcase {
-    background-color: $primary-color;
-    color: #fff;
+    @include set-background($primary-color);
     height: 600px;
     nav {
         display: flex;
@@ -31,13 +32,16 @@ a {
         li {
             padding: 15px;
         }
+        a {
+            color: set-text-color($primary-color);
+        }
         a:hover {
             color: $secondary-color;
         }
     }
-    a {
-        color: #fff;
-    }
+    // a {
+    //     color: set-text-color($primary-color);
+    // }
     &-content {
         height: 100%;
         display: flex;
