@@ -1,0 +1,10 @@
+$color: blue;
+.hello-world-button {
+    background: $color;
+    color: white;
+}
+
+.hello-world-text {
+    color: $color;
+    font-size: large;
+}
